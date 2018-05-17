@@ -18,12 +18,12 @@ services:
   db:
     image: mysql:5.7
     container_name: dm-db
-    ports:
-      - 3306:3306
     environment:
       MYSQL_DATABASE: dm-django
       MYSQL_ROOT_PASSWORD: hogehoge
       TZ: 'Asia/Tokyo'
+    ports:
+      - 3306:3306
     volumes:
       - ./mysql:/var/lib/mysql
       - ./sql:/docker-entrypoint-initdb.d
@@ -34,7 +34,7 @@ services:
       context: ./
       dockerfile: ./docker/web.docker
     container_name: dm-web
-    command: uwsgi --socket :8001 --module dm-site.wsgi
+    command: uwsgi --socket :8001 --module mysite.wsgi
     volumes:
       - ./src:/code
       - ./static:/static

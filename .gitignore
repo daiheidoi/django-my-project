@@ -3,5 +3,10 @@
 __pycache__
 db.sqlite3
 
+# ローカル環境
+static
+redis
+mysql
+
 # 最後の行に記述
 !.gitkeep
