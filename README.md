@@ -22,6 +22,7 @@ docker-compose run web ./manage.py shell -c "from django.contrib.auth.models imp
 ```
 
 http://localhost:8000
+
 http://localhost:8000/_admin
 
 上記でアクセス確認
