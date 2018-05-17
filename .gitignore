@@ -10,6 +10,9 @@ db.sqlite3
 /redis/*
 /mysql/*
 
+# IDE 設定
+.idea
+
 # 最後の行に記述
 !.gitkeep
 
