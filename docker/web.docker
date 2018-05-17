@@ -1,0 +1,8 @@
+FROM python:alpine3.7
+RUN apk add --no-cache gcc musl-dev linux-headers
+ENV PYTHONUNBUFFERED 1
+RUN mkdir /code
+WORKDIR /code
+ADD web/requirements.txt /code/
+RUN pip install -r requirements.txt
+ADD . /code/
