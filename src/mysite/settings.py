@@ -85,6 +85,7 @@ DATABASES = {
         'PASSWORD': 'hogehoge',
         'HOST': 'db',
         'PORT': '3306',
+        'TIME_ZONE': 'Asia/Tokyo',
         'OPTIONS': {
             'charset': 'utf8mb4',
         },
